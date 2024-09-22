@@ -27,6 +27,18 @@
       "relation": "oneToOne",
       "target": "api::user-guitarra.user-guitarra",
       "mappedBy": "user_api"
+    },
+    "publicacions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::publicacion.publicacion",
+      "mappedBy": "user_api"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "user_api"
     }
   }
 }

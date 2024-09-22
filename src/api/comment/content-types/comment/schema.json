@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "singularName": "comment",
+    "pluralName": "comments",
+    "displayName": "comment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "like": {
+      "type": "biginteger",
+      "default": "0",
+      "required": true
+    },
+    "publicacion": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::publicacion.publicacion",
+      "inversedBy": "comments"
+    },
+    "user_api": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-api.user-api",
+      "inversedBy": "comments"
+    }
+  }
+}

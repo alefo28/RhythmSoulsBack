@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publicacions",
+  "info": {
+    "singularName": "publicacion",
+    "pluralName": "publicacions",
+    "displayName": "publicacion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "required": true
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "publicacion"
+    },
+    "user_api": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-api.user-api",
+      "inversedBy": "publicacions"
+    }
+  }
+}
