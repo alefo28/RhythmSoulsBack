@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos_news",
+  "info": {
+    "singularName": "cursos-new",
+    "pluralName": "cursos-news",
+    "displayName": "CursosNew"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "text"
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "video": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "cursos_new"
+    }
+  }
+}

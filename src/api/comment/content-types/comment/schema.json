@@ -39,6 +39,12 @@
       "relation": "manyToOne",
       "target": "api::user-api.user-api",
       "inversedBy": "comments"
+    },
+    "cursos_new": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cursos-new.cursos-new",
+      "inversedBy": "comments"
     }
   }
 }
