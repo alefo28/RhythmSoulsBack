@@ -22,12 +22,6 @@
     "password": {
       "type": "string"
     },
-    "user_guitarra": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-guitarra.user-guitarra",
-      "mappedBy": "user_api"
-    },
     "publicacions": {
       "type": "relation",
       "relation": "oneToMany",
@@ -43,6 +37,12 @@
     "premium": {
       "type": "boolean",
       "default": false
+    },
+    "compras": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::compra.compra",
+      "mappedBy": "user_api"
     }
   }
 }

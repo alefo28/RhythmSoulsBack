@@ -34,12 +34,6 @@
       "type": "uid",
       "targetField": "nombre"
     },
-    "user_guitarra": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-guitarra.user-guitarra",
-      "mappedBy": "guitarra"
-    },
     "instrument": {
       "type": "enumeration",
       "enum": [
@@ -61,6 +55,12 @@
         "Other"
       ],
       "required": true
+    },
+    "compra_productos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::compra-producto.compra-producto",
+      "mappedBy": "guitarra"
     }
   }
 }

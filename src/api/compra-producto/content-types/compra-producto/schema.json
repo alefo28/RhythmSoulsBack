@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "compra_productos",
+  "info": {
+    "singularName": "compra-producto",
+    "pluralName": "compra-productos",
+    "displayName": "compraProducto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "compra": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::compra.compra",
+      "inversedBy": "compra_productos"
+    },
+    "guitarra": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::guitarra.guitarra",
+      "inversedBy": "compra_productos"
+    },
+    "Amount": {
+      "type": "biginteger"
+    }
+  }
+}
