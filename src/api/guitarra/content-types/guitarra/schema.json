@@ -17,10 +17,12 @@
       "required": true
     },
     "descripcion": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "precio": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "imagen": {
       "type": "media",

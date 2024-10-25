@@ -17,12 +17,13 @@
       "required": true
     },
     "contenido": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "imagen": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
